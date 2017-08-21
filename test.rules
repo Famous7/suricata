@@ -1,4 +1,17 @@
-alert tcp any any -> any 80 (msg:"test rule"; content:"GET /"; content:"Host: www.gilgil.net"; sid:10001; rev:1;)
+#http://hitomi.la
+# is auto redirect to https://hitomi.la, so use sid 100037
+
+#http://onaratv.com 
+# this site does not exists
+
+#https://mujige53770.wixsite.com
+# this site does not exists
+
+#https://www.facebook.com/profile.php?id=100019007882633
+#https://www.opioids.com/offshorepharmacy/index.html
+#https://yobit.net/en/dice/
+# those site use tls so, can't filter specific parts of a site 
+
 
 alert tcp any any -> any 80 (msg:"kass.org.kr"; content:"GET / HTTP/1."; content:"Host: kass.org.kr"; sid:10002; rev:1;)
 
